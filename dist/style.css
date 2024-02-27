@@ -5,26 +5,38 @@
     font-family: sans-serif;
 }
 
-body {
-    background-image: url('/home/snus4me/repos/Restaurant-page/images/wall3.jpg');
+.background-image {
+    background-image: url("wall3.jpg");
+    position: fixed;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
+    z-index: -1;
+}
+
+body {
+    min-height: 100vh;
 }
 
 header {
     display: flex;
-    grid-row: 1fr ;
     border-bottom: 3px solid rgb(240, 188, 47);
     align-items: flex-end;
     padding: 1rem;
+    height: 120px;
 }
 
 #content {
-    grid-row: 6fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+    
 }
 
 #content h1 {
@@ -39,7 +51,7 @@ header {
     color: rgb(240, 188, 47);
 }
 
-#content p {
+.quote {
     color: rgb(245, 245, 206);
     font-family: Cookie;
     font-size: 30px;
@@ -70,3 +82,27 @@ nav button:hover {
     cursor: pointer;
     filter: brightness(0.8);
 }
+
+.item-container {
+    width: 60vw;
+    max-width: 800px;
+    height: fit-content;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.item-name {
+    text-align: center;
+    font-family: Cookie;
+    font-size: 35px;
+}
+
+.item-description {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
